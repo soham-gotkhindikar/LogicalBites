@@ -1,8 +1,47 @@
+body{
+  overflow:hidden;
+}
+
+.Title{
+  font-size:6em;
+}
+.frame {
+  display:grid;
+  grid-template-rows:1fr 5fr;
+  text-align:center;
+}
+.skeleton {
+  position:relative;
+  display: grid;
+  grid-template-columns: 5fr 1.5fr;
+  gap: 10px;
+  height:75vh;
+  overflow:hidden;
+  padding-top:20px;
+  padding-bottom:40px;
+  padding-left:20px;
+  padding-right:20px;
+}
+/* ul li::before {
+  content: "✅";
+  display: inline-block;
+  margin-right: 0.2rem;
+} */
+.sidebar{
+  position:relative;
+  border:solid;
+  background-color:blue;
+  border-radius:25px 0px 0px 25px;
+  left:30px;
+  color:white;
+  font-size:1.7em;
+  overflow-y:scroll;
+}
 .wrapper {
+  
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
     gap: 20px;
-    grid-auto-rows: minmax(100px, auto);
     text-align:center;
     -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
@@ -11,6 +50,8 @@
         -ms-user-select: none; /* Internet Explorer/Edge */
             user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome, Edge, Opera and Firefox */
+    overflow-y:scroll;
+    
   }
 .wrapper label {
   display: inline-block;
