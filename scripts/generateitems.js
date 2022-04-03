@@ -58,3 +58,6 @@ function handleChange(checkbox){
         wholelist.appendChild(pelement);
     }
 }
+function changeGroup(dropdownlist){
+
+}

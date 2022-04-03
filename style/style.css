@@ -1,0 +1,120 @@
+.about{
+    width: 250px;
+    position: fixed;
+    Z-index: 1;
+    top: 70px;
+    left: 40px;
+    background: #e389c0;
+    overflow-x: hidden;
+    padding: 12px;
+    margin: 0;
+    float: left;
+    margin-right: 50px;
+    position: relative;
+    text-align: left;
+    font-size: 20px;
+}
+
+.about2{
+    width: 250px;
+    position: fixed;
+    Z-index: 1;
+    top: 70px;
+    left: 190px;
+    background: #e389c0;
+    overflow-x: hidden;
+    padding: 12px;
+    margin: 0;
+    float: left;
+    margin-right: 50px;
+    position: relative;
+    text-align: left;
+    font-size: 20px;
+}
+
+.title{
+    text-align: center;
+}
+
+.grid-container {
+    display: grid;
+    height: 100px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 500px;
+}
+
+.button {
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    font-size: 25px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.button1 {
+    background-color:rgb(112, 225, 126);
+    color: black;
+    border: 2px solid #4CAF50;
+}
+
+.button1:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.button2 {
+    background-color:rgb(132, 214, 255);
+    color: black;
+    border: 2px solid #008CBA;
+}
+
+.button2:hover {
+    background-color: #008CBA;
+    color: white;
+}
+
+.button3 {
+    background-color:rgb(255, 165, 92);
+    color: black;
+    border: 2px solid #ff7442;
+}
+
+.button3:hover {
+    background-color: #ff7442;
+    color: white;
+}
+
+.submitButton {
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    width: 50%;
+    font-size: px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 70px;
+    top: 260px;
+    left: 50px;
+}
+.submitButton1 {
+    background-color:rgb(5, 190, 57);
+    color: black;
+    border: 2px solid #1c5c17;
+}
+
+.note {
+    font-size: 20px;
+    top: 40 px;
+    color:rgb(239, 242, 247);
+    background-color: rgba(0, 0, 0, 0.5);
+}
