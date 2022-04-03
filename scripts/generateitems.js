@@ -122,7 +122,8 @@ function susButton(){
     for(var x = 0; x < list.length; x++){
         if(list[x].indexOf(" ") != -1){
             let test = list[x].split(" ");
-            total.push(test.join('+'));
+            let ampersands = test.join('+').split('&');
+            total.push(ampersands.join('%26'));
         }
         else {
             total.push(list[x]);

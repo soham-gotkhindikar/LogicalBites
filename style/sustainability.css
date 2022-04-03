@@ -1,0 +1,21 @@
+.displayGrid {
+
+    display: grid;
+    text-align: center;
+    position: relative;
+    top: 25px;
+    grid-template-columns: 1fr 1fr;
+    
+
+}
+
+#breakdown {
+
+    overflow-y: scroll;
+    height: 100%;
+    position: relative;
+    height: 70vh;
+
+
+}
+

@@ -5,13 +5,20 @@ const urlParams = new URLSearchParams(queryString);
 const search = urlParams.get('search');
 var corredata = search.split("-");
 console.log(corredata);
+
 function algorithm(input){
     let cftp = 0.0;
     let c = 0.0; //counter
     //calculates the sum of carbon footprints
     for(var x = 0; x < data.length; x++){
-        if(search.indexOf(data[x][1].toLowerCase()) != -1){
+        if (search.indexOf(data[x][1].toLowerCase()) != -1){
             cftp = cftp + parseFloat(data[x][2]);
+
+            let item = document.createElement('h3');
+            let text = document.createTextNode(data[x][1] + ':    ' + parseFloat(data[x][2]) + 'kg CO2e');
+
+            item.appendChild(text);
+            document.getElementById('breakdown').appendChild(item);
 
         }
         c = c+parseFloat(data[x][2]);
@@ -26,6 +33,6 @@ function algorithm(input){
 We want sustainability score, and then the breakdown for each ingredient
 */
 window.onload = function() {
-    var text = document.createTextNode("Sustainability Score: " + algorithm() + "%");
+    var text = document.createTextNode("Sustainability Score: " + algorithm().toFixed(2) + "%");
     document.getElementById("result").appendChild(text);
 };
