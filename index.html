@@ -3,42 +3,40 @@
     <head>
         <link rel="stylesheet" type="text/css" href="./style/style.css" />
         <script src="./scripts/index.js"></script>
+        <link rel="stylesheet" type="text/css" href="./style/generateitem.css" />
+        <script src="./scripts/generateitems.js"></script>
     </head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <body style="background-color:#FBE491;">
-        <title>LogicalBite</title>
-        <header class="masthead">
-            <h1 class="title">LogicalBite</h1>
-            <p style="text-align:center"><em>Making it easier to make the logical bite.</em></p>
-            <hr>
-            <div class="grid-container">
-                <div class="grid-item">
-                    <div class="about">
-                        <p><b>LogicalBite:</b></p>
-                        <p>LogicalBite is an informative, user-interactive site that takes gives information about the environmental impacts of certain foods. With a few simple clicks, the user may choose as many unprocessed food items that make up their meal and watch with amazement as the site automatically calculates the meal's overall carbon footprint.</p>
+        <div class="initial"><title>LogicalBite</title>
+            <header class="masthead">
+                <h1 class="title">LogicalBite</h1>
+                <p style="text-align:center"><em>Making it easier to make the logical bite.</em></p>
+                <hr>
+                <div class="grid-container">
+                    <div class="grid-item">
+                        <div class="about">
+                            <p><b>LogicalBite:</b></p>
+                            <p>LogicalBite is an informative, user-interactive site that takes gives information about the environmental impacts of certain foods. With a few simple clicks, the user may choose as many unprocessed food items that make up their meal and watch with amazement as the site automatically calculates the meal's overall carbon footprint.</p>
+                        </div>
+                    </div>
+                    <div class="grid-item">
+                        <div class="hehehehe">
+                            <button class="button button1" onClick="carbs()">Carbs</button>
+                            <button class="button button3" onClick="protein()">Protein</button>
+                            <button class="button button2" onClick="fats()">Fats</button>
+                            <p class = "note"><i><ins>Usability Note:</ins></i><br><br>Start out by clicking on one of the major food groups above. On the next page, simply click a product from the list to add it to your ingredients list. Use the back button to go back to the previous page, or the submit button to finalize your selections. </p>
+                        </div>
+                    </div>
+                    <div class="grid-item">
+                        <div class="sidebar" style="left:20%; height:110%;"><h3 style="color:white;text-decoration: underline;">Your List Of Items!</h2><ul><li>sample item 1</li><li>sample item 2</li><li>sample item 3</li></ul><button style="position:fixed; bottom:10%; right:2%;width:100px; height:50px; background-color:lightgreen;color:white;font-weight:bold; font-size:0.7em;border-radius:5px;">Submit</button></div></div>
                     </div>
                 </div>
-                <div class="grid-item">
-                    <div class="button">
-                        <button class="button button1">Carbs</button>
-                        <button class="button button3">Protein</button>
-                        <button class="button button2">Fats</button>
-                        <p class = "note"><i><ins>Usability Note:</ins></i><br><br>Start out by clicking on one of the major food groups above. On the next page, simply click a product from the list to add it to your ingredients list. Use the back button to go back to the previous page, or the submit button to finalize your selections. </p>
-                    </div>
-                </div>
-                <div class="grid-item">
-                    <div class="about2">
-                        <p class><ins>List of Ingredients</ins></p>
-                        <p>- Ingredient 1</p>
-                        <p>- Ingredient 2</p>
-                        <p>- Ingredient 3</p>
-                        <p>- Ingredient 4</p>
-                        <p>- Ingredient 5</p>
-                    </div>
-                    <button class="submitButton submitButton1">Submit</button>
-                </div>
-            </div>
-        </header>
-        <script src="./scripts/index.js"></script>
+            </header></div>
+        <div class="secondary" hidden>
+            <div class="frame"><div class="Title"><select name="foodgroup" id="foodgroup" onchange="changeGroup(this.value);"><option value="Carbs">Carbs</option><option value="Fats">Fats</option><option value="Protein">Protein</option></select><h1 class="title">LogicalBite</h1><p style="text-align:center"><em>Making it easier to make the logical bite.</em></p><hr></div><div class="skeleton"><div class="wrapper" id="wrapper"></div><div class="sidebar"><h3 style="color:white;text-decoration: underline;">Your List Of Items!</h2><ul id="list"><p>just currently empty :(</p></li></ul><button style="position:fixed; bottom:10%; right:2%;width:100px; height:50px; background-color:lightgreen;color:white;font-weight:bold; font-size:0.7em;border-radius:5px;" onClick="susButton()" >Submit</button></div></div></div>
+
+        </div>
+
     </body>
 </html>
