@@ -7,29 +7,21 @@ var corredata = search.split("-");
 console.log(corredata);
 function algorithm(input){
     let cftp = 0.0;
-    let c = 0; //counter
+    let c = 0.0; //counter
     //calculates the sum of carbon footprints
     for(var x = 0; x < data.length; x++){
         if(search.indexOf(data[x][1].toLowerCase()) != -1){
             cftp = cftp + parseFloat(data[x][2]);
-            c = c+1;
+
         }
+        c = c+parseFloat(data[x][2]);
+
     }
-    susScore = (1-cftp)/c;
+    susScore = (c-cftp)/c;
     susScorePercent = susScore*100
     return susScorePercent;
 }
-function algorithm(input){
-    for(var x = 0; x < data.length; x++){
-        if(search.indexOf(data[x][1].toLowerCase()) != -1){
-            cftp = cftp + parseFloat(data[x][2]);
-            c = c+1;
-        }
-    }
-    susScore = (1-cftp)/c;
-    susScorePercent = susScore*100
-    return susScorePercent;
-}
+
 /*
 We want sustainability score, and then the breakdown for each ingredient
 */
