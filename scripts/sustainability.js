@@ -6,20 +6,34 @@ const search = urlParams.get('search');
 var corredata = search.split("-");
 console.log(corredata);
 function algorithm(input){
-    let total = 0.0;
-    //do stuff with algorithm;
+    let cftp = 0.0;
+    let c = 0; //counter
+    //calculates the sum of carbon footprints
     for(var x = 0; x < data.length; x++){
         if(search.indexOf(data[x][1].toLowerCase()) != -1){
-            total = total + parseFloat(data[x][2]);
-        
+            cftp = cftp + parseFloat(data[x][2]);
+            c = c+1;
         }
     }
-    return total;
+    susScore = (1-cftp)/c;
+    susScorePercent = susScore*100
+    return susScorePercent;
+}
+function algorithm(input){
+    for(var x = 0; x < data.length; x++){
+        if(search.indexOf(data[x][1].toLowerCase()) != -1){
+            cftp = cftp + parseFloat(data[x][2]);
+            c = c+1;
+        }
+    }
+    susScore = (1-cftp)/c;
+    susScorePercent = susScore*100
+    return susScorePercent;
 }
 /*
 We want sustainability score, and then the breakdown for each ingredient
 */
 window.onload = function() {
-    var text = document.createTextNode("Sustainability Score: " + algorithm());
+    var text = document.createTextNode("Sustainability Score: " + algorithm() + "%");
     document.getElementById("result").appendChild(text);
 };
